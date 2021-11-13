@@ -34,7 +34,7 @@ def main():
     if references.yesterday_was_trading_day():
         yesterday = datetime.date.today() - datetime.timedelta(days=1)
         # update database with yesterday's prices
-        intraday_cron.save_price_data(yesterday)
+        intraday_update.save_price_data(yesterday)
 
 if __name__ == "__main__":
     main()
